@@ -1,0 +1,81 @@
+{
+    "type": "authentication",
+    "package": "betterauth",
+    "repo": {
+        "name": "auth-betterauth",
+        "branch": "base"
+    },
+    "envVars": [
+        "BETTER_AUTH_SECRET",
+        "BETTER_AUTH_URL"
+    ],
+    "dependencies": [
+        "better-auth"
+    ],
+    "devDependencies": [],
+    "structure": {
+        "server": "auth.ts",
+        "client": "auth-client.ts",
+        "api": "route.ts",
+        "middleware": "middleware.ts"
+    },
+    "orms": {
+        "drizzle": "./adapters/drizzle.ts",
+        "prisma": "./adapters/prisma.ts"
+    },
+    "engines": {
+        "pg": "./engines/pg.ts",
+        "mysql": "./engines/mysql.ts"
+    },
+    "dbEngine": {
+        "pg": {
+            "drizzle": "pg",
+            "prisma": "postgresql"
+        },
+        "mysql": {
+            "drizzle": "mysql",
+            "prisma": "mysql"
+        }
+    },
+    "ui": {
+        "components": "./ui/*",
+        "dependencies": ["zod","react-hook-form","sonner","next/navigation","next/link","lucide-react", "react-icons"],
+        "shadcn-components": ["button","form","input"]
+    },
+    "routes": {
+        "nextjs-app-router": {
+            "routeKey": "_next-js-app-router_"
+        },
+        "nextjs-pages-router": {
+            "routeKey": "_next-js-pages-router_"
+        }
+    },
+    "features": {
+        "credentials": {
+            "path": "./features/Oauth/drizzle-credential.txt"
+        },
+        "Oauth": {
+            "path": "./features/Oauth/drizzle-Oauth.txt",
+            "providers": [
+                {
+                    "name": "Github",
+                    "metadata": {
+                        "envVars": [
+                            "GITHUB_CLIENT_ID",
+                            "GITHUB_CLIENT_SECRET"
+                        ]
+                    }
+                },
+                {
+                    "name": "Google",
+                    "metadata": {
+                        "envVars": [
+                            "GOOGLE_CLIENT_ID",
+                            "GOOGLE_CLIENT_SECRET"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

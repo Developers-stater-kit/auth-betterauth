@@ -1,0 +1,6 @@
+socialProviders: { 
+    _SOCIAL_PROVIDER_NAME_: { 
+      clientId: process.env._SOCIAL_PROVIDER_NAME_.CLIENT_ID as string, 
+      clientSecret: process.env._SOCIAL_PROVIDER_NAME_.CLIENT_SECRET as string, 
+    }, 
+  }, 

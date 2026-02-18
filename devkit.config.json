@@ -20,12 +20,12 @@
         "middleware": "middleware.ts"
     },
     "orms": {
-        "drizzle": "./adapters/drizzle.ts",
-        "prisma": "./adapters/prisma.ts"
+        "drizzle": "adapters/drizzle.ts",
+        "prisma": "adapters/prisma.ts"
     },
     "engines": {
-        "pg": "./engines/pg.ts",
-        "mysql": "./engines/mysql.ts"
+        "pg": "engines/pg.ts",
+        "mysql": "engines/mysql.ts"
     },
     "dbEngine": {
         "pg": {
@@ -52,10 +52,10 @@
     },
     "features": {
         "credentials": {
-            "path": "./features/Oauth/drizzle-credential.txt"
+            "path": "features/Oauth/drizzle-credential.txt"
         },
         "Oauth": {
-            "path": "./features/Oauth/drizzle-Oauth.txt",
+            "path": "features/Oauth/drizzle-Oauth.txt",
             "providers": [
                 {
                     "name": "Github",

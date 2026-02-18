@@ -20,12 +20,12 @@
         "middleware": "middleware.ts"
     },
     "orms": {
-        "drizzle": "adapters/drizzle.ts",
-        "prisma": "adapters/prisma.ts"
+        "drizzle": "adapters/drizzle.txt",
+        "prisma": "adapters/prisma.txt"
     },
     "engines": {
-        "pg": "engines/pg.ts",
-        "mysql": "engines/mysql.ts"
+        "pg": "engines/pg.txt",
+        "mysql": "engines/mysql.txt"
     },
     "dbEngine": {
         "pg": {

@@ -8,4 +8,10 @@ export const auth = betterAuth({
     database: prismaAdapter(prisma, {
         provider: "__DB_PROVIDER__", // or "mysql", "postgresql", ...etc
     }),
+
+    // CREDENTIAL_START
+    // CREDENTIAL_END
+
+    // OAUTH_START
+    // OAUTH_END
 });

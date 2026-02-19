@@ -5,6 +5,9 @@ export const auth = betterAuth({
     database: drizzleAdapter(db, {
         provider: "__DB_PROVIDER__",
     }),
-    // FEATURES_START
-    // FEATURES_END
+    // CREDENTIAL_START
+    // CREDENTIAL_END
+
+    // OAUTH_START
+    // OAUTH_END
 });

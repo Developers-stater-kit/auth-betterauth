@@ -52,7 +52,7 @@
     },
     "features": {
         "credentials": {
-            "path": "features/Oauth/drizzle-credential.txt"
+            "path": "features/credentials/drizzle-credential.txt"
         },
         "Oauth": {
             "path": "features/Oauth/drizzle-Oauth.txt",

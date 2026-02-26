@@ -19,6 +19,12 @@
         "api": "route.ts",
         "middleware": "middleware.ts"
     },
+    "templatePaths" : {
+        "client": ".auth-client.ts",
+        "api": ".route.ts",
+        "middleware": ".middleware.ts",
+        "ui": "./ui/*"
+    },
     "orms": {
         "drizzle": "adapters/drizzle.txt",
         "prisma": "adapters/prisma.txt"
@@ -38,7 +44,7 @@
         }
     },
     "ui": {
-        "components": "./ui/*",
+        "components-path": "./ui/*",
         "dependencies": ["zod","react-hook-form","sonner","next/navigation","next/link","lucide-react", "react-icons"],
         "shadcn-components": ["button","form","input"]
     },

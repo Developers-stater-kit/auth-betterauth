@@ -23,7 +23,7 @@
         "client": "auth-client.txt",
         "api": "route.txt",
         "middleware": "middleware.txt",
-        "ui": "./ui/*"
+        "ui": "ui"
     },
     "orms": {
         "drizzle": "adapters/drizzle.txt",
@@ -44,7 +44,6 @@
         }
     },
     "ui": {
-        "components-path": "./ui/*",
         "dependencies": ["zod","react-hook-form","sonner","next/navigation","next/link","lucide-react", "react-icons"],
         "shadcn-components": ["button","form","input"]
     },

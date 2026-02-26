@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Button } from "@/components/ui/button";
 import { authClient } from "@/lib/auth-client";  // your auth-client path
 
-export default function SocialAuthButton(provider: string) {
+export default function OauthProvider(provider: string) {
 
   const getIcon = () => {
     switch (provider) {

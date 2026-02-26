@@ -14,16 +14,22 @@
     ],
     "devDependencies": [],
     "structure": {
-        "server": "auth.ts",
-        "client": "auth-client.ts",
-        "api": "route.ts",
-        "middleware": "middleware.ts"
-    },
-    "templatePaths" : {
-        "client": "auth-client.txt",
-        "api": "route.txt",
-        "middleware": "middleware.txt",
-        "ui": "ui"
+        "server": {
+            "name": "auth.ts",
+            "path": null
+        },
+        "client": {
+            "name" : "auth-client.ts",
+            "path" : "auth-client.txt"
+        },
+        "api": {
+            "name": "route.ts",
+            "path": "route.txt"
+        },
+        "middleware": {
+            "name": "middleware.ts",
+            "path": "middleware.txt"
+        }
     },
     "orms": {
         "drizzle": "adapters/drizzle.txt",
@@ -44,6 +50,15 @@
         }
     },
     "ui": {
+        "path": "ui/",
+        "component-files": [
+            "signup-form.tsx",
+            "signin-form.tsx",
+            "forgot-pass.tsx", 
+            "reset-pass.tsx",
+            "oauth-button.tsx",
+            "signout-button.tsx"
+        ],
         "dependencies": ["zod","react-hook-form","sonner","next/navigation","next/link","lucide-react", "react-icons"],
         "shadcn-components": ["button","form","input"]
     },

@@ -20,7 +20,7 @@ import { signUp } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
-import SocialAuthButton from "./socialAuthentication";
+import OauthProvider from "./oauth-button";
 
 const formSchema = z
   .object({
@@ -142,8 +142,8 @@ export function SignUpForm({
           </div>
           <div className="flex flex-col justify-center gap-2">
             {/* choose acc to your selection remove the extra */}
-            <SocialAuthButton provider="google" />
-            <SocialAuthButton provider="github" />
+            <OauthProvider provider="google" />
+            <OauthProvider provider="github" />
           </div>
         </form>
       </Form>

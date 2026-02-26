@@ -20,9 +20,9 @@
         "middleware": "middleware.ts"
     },
     "templatePaths" : {
-        "client": ".auth-client.ts",
-        "api": ".route.ts",
-        "middleware": ".middleware.ts",
+        "client": "auth-client.txt",
+        "api": "route.txt",
+        "middleware": ".middleware.txt",
         "ui": "./ui/*"
     },
     "orms": {

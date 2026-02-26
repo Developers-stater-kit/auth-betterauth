@@ -22,7 +22,7 @@
     "templatePaths" : {
         "client": "auth-client.txt",
         "api": "route.txt",
-        "middleware": ".middleware.txt",
+        "middleware": "middleware.txt",
         "ui": "./ui/*"
     },
     "orms": {

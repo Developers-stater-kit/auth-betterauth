@@ -52,20 +52,7 @@ export function ResetPasswordForm({
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
-
-    const { error } = await authClient.resetPassword({
-      newPassword: values.password,
-      token: token as string,
-    });
-
-    if (error) {
-      setIsLoading(false);
-      toast.error(error.message);
-    } else {
-      toast.success("Password reset successfully");
-      redirect("/login");
-    }
-
+    // your logic
     setIsLoading(false);
     toast.success("Your password has been reset successfully");
   }

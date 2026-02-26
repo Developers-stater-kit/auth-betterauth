@@ -47,25 +47,9 @@ export function SigninForm({
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true); 
-    try {
-      const { error } = await signIn.email({
-        email: values.email,
-        password: values.password,
-      });
-
-      if (error) {
-        toast.error(error.message);
-        return;
-      }
-
-      toast.success("Login successful");
-      router.push("/dashboard");
-    } catch (error) {
-      toast.error("An error occurred during login");
-      console.error(error);
-    } finally {
-      setIsLoading(false);
-    }
+    // your logic 
+    setIsLoading(false); 
+    toast.success("Login successful");
   }
 
   return (
@@ -128,8 +112,9 @@ export function SigninForm({
             </span>
           </div>
           <div className="flex flex-col gap-2">
+            {/* choose acc to your selection remove the extra */}
             <SocialAuthButton provider="google" />
-            <SocialAuthButton provider="github" />  
+            <SocialAuthButton provider="github" />   
           </div>
         </form>
       </Form>

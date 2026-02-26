@@ -58,30 +58,9 @@ export function SignUpForm({
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
-    try {
-      const { error } = await signUp.email({
-        email: values.email,
-        password: values.password,
-        name: values.name,
-        callbackURL: "http://localhost:3000/login",
-      });
-
-      if (error) {
-        toast.error(error.message);
-        return;
-      }
-
-      toast.success("Account created successfully.");
-      setTimeout(() => {
-        toast.success("Please check your email to verify your account.");
-      }, 1000);
-      router.push("/login");
-    } catch (error) {
-      toast.error("An error occurred during signup");
-      console.error(error);
-    } finally {
-      setIsLoading(false);
-    }
+    // your logic comes here 
+    setIsLoading(false);
+    toast.success("Account created successfully.");
   }
 
   return (
@@ -162,6 +141,7 @@ export function SignUpForm({
             </span>
           </div>
           <div className="flex flex-col justify-center gap-2">
+            {/* choose acc to your selection remove the extra */}
             <SocialAuthButton provider="google" />
             <SocialAuthButton provider="github" />
           </div>

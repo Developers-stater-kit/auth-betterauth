@@ -1,11 +1,10 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-  import { FcGoogle } from "react-icons/fc";
+import { FcGoogle } from "react-icons/fc";
 import { Button } from "@/components/ui/button";
 import { authClient } from "@/lib/auth-client";  // your auth-client path
 
-export default function   SocialAuthButton(provider : string) {
-  // const router = useRouter();
+export default function SocialAuthButton(provider: string) {
 
   const getIcon = () => {
     switch (provider) {
@@ -19,11 +18,7 @@ export default function   SocialAuthButton(provider : string) {
   };
 
   const handleSocialSignin = async (provider: string) => {
-    await authClient.signIn.social({
-      provider: provider as "github" | "google",
-      callbackURL: "/dashboard",
-      errorCallbackURL: "/login",
-    });
+    // your logic
   };
 
   return (

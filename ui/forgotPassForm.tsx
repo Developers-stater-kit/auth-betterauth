@@ -38,29 +38,17 @@ export function ForgotPasswordForm({
   const [isLoading, setIsLoading] = useState(false);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsLoading(true);
-
-    const { error } = await authClient.forgetPassword({
-      email: values.email,
-      redirectTo: "/reset-password",
-    });
-
-    if (error) {
-      toast.error(error.message);
-      setIsLoading(false);
-      return;
-    }else{
-      toast.success("Password reset link has been sent to your email")
-    }
-    setIsLoading(false);
-    
+    setIsLoading(true)
+    // your logic comes here 
+    setIsLoading(false)
+    toast.success("Password reset link has been sent to your email")
   }
 
   return (
     <Form {...form}>
-      <form 
-        onSubmit={form.handleSubmit(onSubmit)} 
-        className={cn("flex flex-col gap-6", className)} 
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className={cn("flex flex-col gap-6", className)}
         {...props}
       >
         <div className="flex flex-col items-center gap-2 text-center">
@@ -77,10 +65,10 @@ export function ForgotPasswordForm({
               <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input 
-                    placeholder="m@example.com" 
+                  <Input
+                    placeholder="m@example.com"
                     type="email"
-                    {...field} 
+                    {...field}
                   />
                 </FormControl>
                 <FormMessage />

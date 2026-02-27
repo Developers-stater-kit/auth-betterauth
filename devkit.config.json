@@ -27,7 +27,7 @@
             "path": "route.txt"
         },
         "middleware": {
-            "name": "middleware.ts",
+            "name": "proxy.ts",
             "path": "middleware.txt"
         }
     },

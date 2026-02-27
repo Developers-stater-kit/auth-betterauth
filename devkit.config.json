@@ -59,7 +59,7 @@
             "oauth-button.tsx",
             "signout-button.tsx"
         ],
-        "dependencies": ["zod","react-hook-form","sonner","next/navigation","next/link","lucide-react", "react-icons"],
+        "dependencies": ["zod","react-hook-form","sonner","lucide-react", "react-icons"],
         "shadcn-components": ["button","form","input"]
     },
     "routes": {

@@ -10,7 +10,8 @@
         "BETTER_AUTH_URL"
     ],
     "dependencies": [
-        "better-auth"
+        "better-auth",
+        "@better-auth/drizzle-adapter"
     ],
     "devDependencies": [],
     "structure": {

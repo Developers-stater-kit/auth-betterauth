@@ -86,11 +86,6 @@ export function ForgotPasswordForm({
           Dont have an account? <Link href="/signup" className="text-primary">Sign Up</Link>
         </p>
       </div>
-      <div className="my-6 p-3 border border-yellow-400 rounded px-12 bg-yellow-50/50 dark:bg-yellow-900/10">
-        <p className="text-sm text-yellow-800 dark:text-yellow-200">
-          🚧 Under development, Domain is not Setup
-        </p>
-      </div>
     </Form>
   )
 }

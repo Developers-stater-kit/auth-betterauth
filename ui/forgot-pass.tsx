@@ -2,17 +2,10 @@
 
 import { cn } from "@/lib/utils"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
+import { Controller, useForm } from "react-hook-form"
 import { z } from "zod"
 import { Button } from "@/components/ui/button"
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form"
+import { Field, FieldError, FieldLabel } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { toast } from "sonner"
 import Link from "next/link"
@@ -35,17 +28,17 @@ export function ForgotPasswordForm({
       email: "",
     },
   })
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true)
-    // your logic comes here 
+    // your logic comes here
     setIsLoading(false)
     toast.success("Password reset link has been sent to your email")
   }
 
   return (
-    <Form {...form}>
+    <div>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className={cn("flex flex-col gap-6", className)}
@@ -58,21 +51,23 @@ export function ForgotPasswordForm({
           </p>
         </div>
         <div className="grid gap-6">
-          <FormField
-            control={form.control}
+          <Controller
             name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder="m@example.com"
-                    type="email"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
+            control={form.control}
+            render={({ field, fieldState }) => (
+              <Field data-invalid={fieldState.invalid}>
+                <FieldLabel htmlFor={field.name}>Email</FieldLabel>
+                <Input
+                  {...field}
+                  id={field.name}
+                  type="email"
+                  placeholder="m@example.com"
+                  aria-invalid={fieldState.invalid}
+                />
+                {fieldState.invalid && (
+                  <FieldError errors={[fieldState.error]} />
+                )}
+              </Field>
             )}
           />
           <Button type="submit" className="w-full" disabled={isLoading}>
@@ -83,9 +78,12 @@ export function ForgotPasswordForm({
 
       <div className="text-center mt-4">
         <p className="text-sm text-muted-foreground">
-          Dont have an account? <Link href="/signup" className="text-primary">Sign Up</Link>
+          Dont have an account?{" "}
+          <Link href="/signup" className="text-primary">
+            Sign Up
+          </Link>
         </p>
       </div>
-    </Form>
+    </div>
   )
 }

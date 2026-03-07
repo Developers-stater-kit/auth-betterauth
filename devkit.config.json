@@ -60,8 +60,8 @@
             "oauth-button.tsx",
             "signout-button.tsx"
         ],
-        "dependencies": ["zod","react-hook-form","sonner","lucide-react", "react-icons"],
-        "shadcn-components": ["button","form","input"]
+        "dependencies": ["zod","react-hook-form","@hookform/resolvers","sonner","lucide-react", "react-icons"],
+        "shadcn-components": ["button","field","input"]
     },
     "routes": {
         "nextjs-app-router": {
